@@ -1,0 +1,15 @@
+/Users/jpmac/RiderProjects/LearningFundamentals/LearningFundamentals/bin/Debug/net6.0/LearningFundamentals
+/Users/jpmac/RiderProjects/LearningFundamentals/LearningFundamentals/bin/Debug/net6.0/LearningFundamentals.deps.json
+/Users/jpmac/RiderProjects/LearningFundamentals/LearningFundamentals/bin/Debug/net6.0/LearningFundamentals.runtimeconfig.json
+/Users/jpmac/RiderProjects/LearningFundamentals/LearningFundamentals/bin/Debug/net6.0/LearningFundamentals.dll
+/Users/jpmac/RiderProjects/LearningFundamentals/LearningFundamentals/bin/Debug/net6.0/LearningFundamentals.pdb
+/Users/jpmac/RiderProjects/LearningFundamentals/LearningFundamentals/obj/Debug/net6.0/LearningFundamentals.csproj.AssemblyReference.cache
+/Users/jpmac/RiderProjects/LearningFundamentals/LearningFundamentals/obj/Debug/net6.0/LearningFundamentals.GeneratedMSBuildEditorConfig.editorconfig
+/Users/jpmac/RiderProjects/LearningFundamentals/LearningFundamentals/obj/Debug/net6.0/LearningFundamentals.AssemblyInfoInputs.cache
+/Users/jpmac/RiderProjects/LearningFundamentals/LearningFundamentals/obj/Debug/net6.0/LearningFundamentals.AssemblyInfo.cs
+/Users/jpmac/RiderProjects/LearningFundamentals/LearningFundamentals/obj/Debug/net6.0/LearningFundamentals.csproj.CoreCompileInputs.cache
+/Users/jpmac/RiderProjects/LearningFundamentals/LearningFundamentals/obj/Debug/net6.0/LearningFundamentals.dll
+/Users/jpmac/RiderProjects/LearningFundamentals/LearningFundamentals/obj/Debug/net6.0/refint/LearningFundamentals.dll
+/Users/jpmac/RiderProjects/LearningFundamentals/LearningFundamentals/obj/Debug/net6.0/LearningFundamentals.pdb
+/Users/jpmac/RiderProjects/LearningFundamentals/LearningFundamentals/obj/Debug/net6.0/LearningFundamentals.genruntimeconfig.cache
+/Users/jpmac/RiderProjects/LearningFundamentals/LearningFundamentals/obj/Debug/net6.0/ref/LearningFundamentals.dll
