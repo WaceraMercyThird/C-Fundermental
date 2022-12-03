@@ -1,16 +1,19 @@
-﻿using System.Reflection.Metadata;
+﻿using System.Diagnostics;
+using System.Net;
+using System.Reflection.Metadata;
+using System.Runtime.CompilerServices;
 using System.Text.Json.Serialization;
 
 namespace LearningFundamentals
 
 
 {
-   
+
     class Program
     {
         public static void Main(string[] args)
         {
-            
+
             /*............................................*/
             /*/*
              * Boolean Type
@@ -52,13 +55,13 @@ namespace LearningFundamentals
             Console.WriteLine("equal = " +equal);
             Console.WriteLine("notEqual = " +notEqual);
             Console.ReadLine();*/
-            
-            
+
+
             /*............................................*/
             /*
              * Simple problem solving programs.
              */
-            
+
             /*int x;
             int t;
             
@@ -70,7 +73,8 @@ namespace LearningFundamentals
             */
 
 
-            /*string age;
+            /*
+            string age;
             string text;
             
             age = "twenty six";
@@ -78,12 +82,12 @@ namespace LearningFundamentals
             Console.WriteLine(text);
             Console.WriteLine("What is this?");
             Console.ReadLine();*/
-            
+
             /*............................................*/
             /*
              * User Input
              */
-            
+
             /*Console.WriteLine("What is your name?");
             Console.Write("Type your firstname: ");
             string myFirstName;
@@ -99,8 +103,8 @@ namespace LearningFundamentals
             string myLastName;
             myLastName = Console.ReadLine();
             Console.WriteLine(myLastName);*/
-            
-            
+
+
 /*............................................*/
             /*
              * Concatenation of Mixed Types
@@ -111,8 +115,8 @@ namespace LearningFundamentals
 
             string s1 = "Four: " + (2 + 2);
             Console.WriteLine(s1);*/
-            
-            
+
+
             /*............................................*/
 
             /*
@@ -125,8 +129,8 @@ namespace LearningFundamentals
             Console.Write("{0}", str);
             */
 
-            
-            /*............................................*/   
+
+            /*............................................*/
             /*string name = "John";
             int age = 18;
             string town = "Seattle";
@@ -134,7 +138,7 @@ namespace LearningFundamentals
                 "{0} is {1} years old from {2}!\n", name, age, town);
             Console.Write(
                 "{0} is {1} years old from {2}!\n", name, age, town);*/
-            
+
             /*..............................................*/
             /*
              *  Conditional Statement
@@ -166,16 +170,16 @@ namespace LearningFundamentals
              Console.WriteLine(message);
             Console.ReadLine();
             */
-           
-            
+
+
 
             /*message = (userChoice == "1") ? "boat" : "stand of lint";
             
             Console.WriteLine("You entered: {0}, therefore you won a {1}.",userChoice, message);
             
             Console.ReadLine();*/
-            
-            
+
+
             /*..............................................*/
             /*
              *  For Iterations
@@ -206,11 +210,11 @@ namespace LearningFundamentals
             }
             Console.ReadLine();
             */
-            
-            
+
+
 /*........................*/
 /*Reverse an array with C# */
-            string zig = "You can";
+            /*string zig = "You can";
             char[] charArray = zig.ToCharArray();
             Array.Reverse(charArray);
             Console.WriteLine( charArray);
@@ -221,13 +225,189 @@ namespace LearningFundamentals
             }
             {
                 
-            }
-            
+            }*/
+            /*........................*/
+/*Defining and calling simple methods */
+            /*bool displayOrder = true;
+            while (displayOrder == true)
+            {
+                displayOrder = Iterate();
+            }*/
 
+            WorkingWithStrings();
+            /*PrintSign(2);
+            ReverseString();
+            Methods();
+            PrintCompanyInformation();
+            Console.ReadLine();*/
 
+/* While Iteration*/
 
 
         }
+
+        /*private static void Methods()
+        {
+            Console.WriteLine("Hello World");
+            Console.WriteLine("Microsoft");
+            Console.WriteLine("www.microsoft.com");
+        }*/
+
+        /*static void PrintCompanyInformation()
+        {
+// Invoking the Method() method
+            Methods();
+            Console.WriteLine("Address: One, Microsoft Way");
+        }*/
+
+        /*static void PrintSign(int number)
+        {
+            if (number > 0)
+            {
+                Console.WriteLine("Positive");
+            }
+            else if (number < 0)
+                
+            {
+                Console.WriteLine("Negative");
+            }
+            else
+            {
+                Console.WriteLine("Zero");
+            }
+        }
+        */
+
+        /*static void ReverseString()
+        {
+            string Message = "Hello C#";
+            char[] messageArray = Message.ToCharArray();
+            Array.Reverse(messageArray);
+            foreach (var item in messageArray)
+            {
+                Console.Write(item);
+            }
+        }*/
+        /*private static bool Iterate()
+        {
+            Console.Clear();
+            Console.WriteLine("Choose an option: ");
+            Console.WriteLine("1) Prime Number");
+            Console.WriteLine("2 Guessing Game");
+            Console.WriteLine("3 exit");
+
+            String result = Console.ReadLine();
+
+            if (result == "1")
+            {
+                PrintNumber();
+                return true;
+            }
+            else if (result == "2")
+            {
+                GuessingGame();
+                return true;
+            }
+            else if (result == "3")
+            {
+                /*correctAnswer();#1#
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+
+
+        }
+        */
+    
+
+    /*private static void PrintNumber()
+        {
+            Console.Clear();
+            Console.WriteLine("Print numbers");
+            Console.Write("Type a number: ");
+            int result = int.Parse(Console.ReadLine());
+            int counter = 1;
+            while (counter < result)
+            {
+                Console.Write(counter);
+                Console.Write(".");
+                counter++;
+            }
+            Console.ReadLine();
+        }*/
+        /*private static void GuessingGame()
+        {
+            Console.Clear();
+            Console.WriteLine("Guessing Game!");
+
+            Random myRandom = new Random();
+            int randomNumber = myRandom.Next(1, 11);
+
+            int guesses = 0;
+            bool incorrect = true;
+
+            do
+            {
+                Console.WriteLine("Guess a number between 1 and 10: ");
+                String result = Console.ReadLine();
+                guesses++;
+
+                if (result == randomNumber.ToString())
+                {
+                    incorrect = false;
+                }
+                else
+                {
+                    Console.WriteLine("Wrong!");
+                }
+            } while (incorrect);
+            Console.WriteLine("Correct! it took you {0} guesess.", guesses);
+            Console.ReadLine();
+            
+        }*/
+
+        /*private static void correctAnswer()
+        {
+            Console.WriteLine("You choose number 3");
+            Console.ReadLine();
+        }*/
+
+        private static void WorkingWithStrings()
+        {
+            /*String myString =  "My \"so-called\"world." ;*/
+            /*
+            String myString = "What if i need a \n new line?";
+            */
+            /*
+            String myString = "Go to your c:\\ drive";
+            */
+            /*
+            String myString = String.Format("{1} = {0}", "first", "Second");
+            */
+            /*
+            String myString = String.Format("{0:C}", 123.45);
+            */
+            /*
+            String myString = String.Format("{0:N}", 1234567890);
+            */
+            /*
+            String myString = String.Format("Percentage {0:P}", .123);
+            */
+            /*
+            String myString = String.Format("Phone number: {0:(###) ### ######}", 254745345345);
+            */
+            String myString = "That summer we took threes across the board ";
+            myString = myString.Substring(6, 14);
+            Console.WriteLine(myString);
+            Console.ReadLine();
+        }
+
+
+
+
     }
 }
 
