@@ -4,6 +4,8 @@ using System.Reflection.Metadata;
 using System.Runtime.CompilerServices;
 using System.Text.Json.Serialization;
 using Microsoft.VisualBasic;
+using System.IO;
+
 
 namespace LearningFundamentals
 
@@ -16,6 +18,12 @@ namespace LearningFundamentals
         
         public static void Main(string[] args)
         {
+
+            WebClient client = new WebClient();
+            string reply = client.DownloadString("http://msdn.microsoft.com");
+            
+            Console.WriteLine(reply);
+            File.WriteAllText(@"C:\Lesson\WriteText.txt", reply);
 
             /*............................................*/
             /*/*
@@ -405,20 +413,26 @@ namespace LearningFundamentals
             String myString = "That summer we took threes across the board ";
             myString = myString.Substring(6, 14);
             Console.WriteLine(myString);
-          
-            
+
+            Car.myMethod();
             Car myCar = new Car();
             myCar.Make = "Toyota";
             myCar.Model = "Corolla";
             myCar.Year = 2000;
             myCar.Color = "Grey";
+            
             Console.WriteLine("{2} {3} {1} {0}", myCar.Make, myCar.Model, myCar.Year, myCar.Color);
            
 
-            Console.WriteLine("{2} {3} {1} {0}", myCar.Make, myCar.Model, myCar.Year, myCar.Color);
+            Console.WriteLine("{2} {3} {1} {0}", 
+                myCar.Make, 
+                myCar.Model, 
+                myCar.Year, 
+                myCar.Color);
             decimal value = DetermineMarketValue(myCar);
             Console.WriteLine("{0:C}", value);
             Console.WriteLine("{0:C}", myCar.DetermineMarketValue());
+            
           
 
         }
@@ -430,6 +444,8 @@ namespace LearningFundamentals
 
             return carValue;
         }
+
+       
     
 
        
@@ -440,6 +456,27 @@ namespace LearningFundamentals
         public String Model { get; set; }
         public int Year { get; set; }
         public String Color { get; set; }
+        
+        //Static member as static Method
+        public static void myMethod()
+        {
+            Console.WriteLine("Called the Static Method");
+            {
+                
+            }
+        }
+        
+        
+        
+        
+
+/* A constuctor of the class */        
+        
+        public Car()
+        {
+            
+            Make = "Nissan";
+        }
 
 
         public decimal DetermineMarketValue()
@@ -452,6 +489,7 @@ namespace LearningFundamentals
 
             return carValue;
         }
+        
     }
 }
 
