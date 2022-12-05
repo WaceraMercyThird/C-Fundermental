@@ -3,6 +3,7 @@ using System.Net;
 using System.Reflection.Metadata;
 using System.Runtime.CompilerServices;
 using System.Text.Json.Serialization;
+using Microsoft.VisualBasic;
 
 namespace LearningFundamentals
 
@@ -11,6 +12,8 @@ namespace LearningFundamentals
 
     class Program
     {
+       
+        
         public static void Main(string[] args)
         {
 
@@ -235,32 +238,32 @@ namespace LearningFundamentals
             }*/
 
             WorkingWithStrings();
-            /*PrintSign(2);
+            PrintSign(2);
             ReverseString();
             Methods();
             PrintCompanyInformation();
-            Console.ReadLine();*/
+            Console.ReadLine();
 
 /* While Iteration*/
 
 
         }
 
-        /*private static void Methods()
+        private static void Methods()
         {
             Console.WriteLine("Hello World");
             Console.WriteLine("Microsoft");
             Console.WriteLine("www.microsoft.com");
-        }*/
+        }
 
-        /*static void PrintCompanyInformation()
+        static void PrintCompanyInformation()
         {
 // Invoking the Method() method
             Methods();
             Console.WriteLine("Address: One, Microsoft Way");
-        }*/
+        }
 
-        /*static void PrintSign(int number)
+        static void PrintSign(int number)
         {
             if (number > 0)
             {
@@ -276,9 +279,9 @@ namespace LearningFundamentals
                 Console.WriteLine("Zero");
             }
         }
-        */
+        
 
-        /*static void ReverseString()
+        static void ReverseString()
         {
             string Message = "Hello C#";
             char[] messageArray = Message.ToCharArray();
@@ -287,8 +290,8 @@ namespace LearningFundamentals
             {
                 Console.Write(item);
             }
-        }*/
-        /*private static bool Iterate()
+        }
+        private static bool Iterate()
         {
             Console.Clear();
             Console.WriteLine("Choose an option: ");
@@ -310,7 +313,7 @@ namespace LearningFundamentals
             }
             else if (result == "3")
             {
-                /*correctAnswer();#1#
+                correctAnswer();
                 return false;
             }
             else
@@ -320,10 +323,10 @@ namespace LearningFundamentals
 
 
         }
-        */
+        
     
 
-    /*private static void PrintNumber()
+    private static void PrintNumber()
         {
             Console.Clear();
             Console.WriteLine("Print numbers");
@@ -337,8 +340,8 @@ namespace LearningFundamentals
                 counter++;
             }
             Console.ReadLine();
-        }*/
-        /*private static void GuessingGame()
+        }
+        private static void GuessingGame()
         {
             Console.Clear();
             Console.WriteLine("Guessing Game!");
@@ -365,15 +368,15 @@ namespace LearningFundamentals
                 }
             } while (incorrect);
             Console.WriteLine("Correct! it took you {0} guesess.", guesses);
-            Console.ReadLine();
+        
             
-        }*/
+        }
 
-        /*private static void correctAnswer()
+        private static void correctAnswer()
         {
             Console.WriteLine("You choose number 3");
-            Console.ReadLine();
-        }*/
+         
+        }
 
         private static void WorkingWithStrings()
         {
@@ -402,12 +405,53 @@ namespace LearningFundamentals
             String myString = "That summer we took threes across the board ";
             myString = myString.Substring(6, 14);
             Console.WriteLine(myString);
-            Console.ReadLine();
+          
+            
+            Car myCar = new Car();
+            myCar.Make = "Toyota";
+            myCar.Model = "Corolla";
+            myCar.Year = 2000;
+            myCar.Color = "Grey";
+            Console.WriteLine("{2} {3} {1} {0}", myCar.Make, myCar.Model, myCar.Year, myCar.Color);
+           
+
+            Console.WriteLine("{2} {3} {1} {0}", myCar.Make, myCar.Model, myCar.Year, myCar.Color);
+            decimal value = DetermineMarketValue(myCar);
+            Console.WriteLine("{0:C}", value);
+            Console.WriteLine("{0:C}", myCar.DetermineMarketValue());
+          
+
         }
 
+        private static decimal DetermineMarketValue(Car car)
+        {
+            decimal carValue = 100.0M;
+            
+
+            return carValue;
+        }
+    
+
+       
+    }
+    class Car
+    {
+        public String Make { get; set; }
+        public String Model { get; set; }
+        public int Year { get; set; }
+        public String Color { get; set; }
 
 
+        public decimal DetermineMarketValue()
+        {
+            decimal carValue;
+            if (Year > 1990)
+                carValue = 10000;
+            else
+                carValue = 2000;
 
+            return carValue;
+        }
     }
 }
 
